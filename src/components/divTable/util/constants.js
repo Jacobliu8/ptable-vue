@@ -1,0 +1,1 @@
+export const DEFAULT_CELL_MIN_WIDTH = 100;
