@@ -8,16 +8,10 @@ export default {
 
     props: {
         content: String,
-        align: {
-            type: String,
-            default: 'left',
-        },
+        align: String,
         className: String,
         width: Number,
-        minWidth: {
-            type: Number,
-            default: DEFAULT_CELL_MIN_WIDTH,
-        },
+        minWidth: Number,
         ellipsis: Boolean,
         render: Function,
     },
@@ -27,8 +21,8 @@ export default {
             return this.render;
         }
         let cellStyle = {
-            minWidth: this.minWidth,
-            textAlign: this.align,
+            minWidth: this.minWidth || DEFAULT_CELL_MIN_WIDTH,
+            textAlign: this.align || 'left',
             display: 'table-cell',
         };
         if (this.ellipsis) {
