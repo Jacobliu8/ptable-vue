@@ -35,20 +35,8 @@ export default {
     if (!_.isNil(this.width)) {
       cellStyle.width = this.width;
     }
-    return (
-      < div;
-  class
-    = {
-      this
-      .className,
-    };
-    style = {cellStyle} > content < /div>;
-  )
-    ;
+    return (<div class={this.className} style={cellStyle}>this.content</div>);
   },
-
   computed: {},
-
   methods: {},
-
 };
