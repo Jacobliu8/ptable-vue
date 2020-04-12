@@ -1,14 +1,14 @@
 export default {
-    name: 'TableHeader',
+  name: 'TableHeader',
 
-    mixins: [],
+  mixins: [],
 
-    render(h) {
-    },
+  render (h) {
+  },
 
-    props: {},
+  props: {},
 
-    computed: {},
+  computed: {},
 
-    methods: {},
+  methods: {},
 };

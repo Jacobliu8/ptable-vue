@@ -1,11 +1,11 @@
 <template>
-    <div>pTable</div>
+  <div>pTable</div>
 </template>
 
 <script>
-    export default {
-        name: 'Table'
-    };
+  export default {
+    name: 'Table',
+  };
 </script>
 
 <style scoped>
