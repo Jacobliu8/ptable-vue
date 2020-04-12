@@ -1,12 +1,10 @@
 <template>
-
+  <div class='p-table-native'> p table native</div>
 </template>
 
 <script>
   export default {
-    name: 'Table',
-    component: {},
-    props: {},
+    name: 'PTableNative',
   };
 </script>
 
