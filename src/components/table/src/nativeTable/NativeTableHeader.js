@@ -3,7 +3,7 @@ export default {
 
   mixins: [],
 
-  render (h) {
+  render () {
   },
 
   props: {},

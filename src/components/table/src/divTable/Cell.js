@@ -1,4 +1,4 @@
-import {DEFAULT_CELL_MIN_WIDTH} from './util/constants';
+import {DEFAULT_CELL_MIN_WIDTH} from '../util/constants';
 import _ from 'lodash';
 
 export default {

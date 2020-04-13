@@ -1,23 +1,23 @@
 <template>
-  <div class='p-table'>
+  <div class='p-table-root'>
     <component v-bind:is='getSpecificComponent()'
                :height='height'
                :rowKey='rowKey'
                :border='border'
                :empty-text='emptyText'
                :show-Header='showHeader'
-               :data='data'
-    ></component>
+               :data='data'>
+    </component>
   </div>
 </template>
 
 <script>
-  import PTableNative from './nativeTable/PTableNative';
+  import PTableNative from './nativeTable/NativeTable';
   import PTableDiv from './divTable/PTableDiv';
   import {
     DIV_TABLE_TYPE,
     NATIVE_TABLE_TYPE,
-  } from '../../constant/table/constant';
+  } from '../../../constant/table/constant';
   import {TableParamsMixins} from './mixins/tableParamsMixins';
 
   export default {
