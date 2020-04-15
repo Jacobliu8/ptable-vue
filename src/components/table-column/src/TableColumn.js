@@ -43,7 +43,7 @@ export default {
   },
 
   mounted () {
-    this.owner.store.insertColumn(this.columnConfig);
+    this.owner.store.commit('insertColumn', this.columnConfig);
   },
 
   data () {

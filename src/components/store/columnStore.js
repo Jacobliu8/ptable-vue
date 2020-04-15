@@ -4,6 +4,7 @@ export const createStore = () => {
   const store = new Vuex.Store({
     state: {
       columns: [],
+      data: [],
     },
     mutations: {
       insertColumn (state, column, index) {
@@ -14,6 +15,9 @@ export const createStore = () => {
         else {
           array.push(column);
         }
+      },
+      setData (state, data) {
+        state.data = data;
       },
     },
   });
