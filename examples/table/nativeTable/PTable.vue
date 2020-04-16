@@ -1,8 +1,8 @@
 <template>
-  <p-table type='NATIVE_TABLE' :data='tableData'>
-    <p-table-column title='Date' key='date'></p-table-column>
-    <p-table-column title='Name' key='name'></p-table-column>
-    <p-table-column title='Address' key='address'></p-table-column>
+  <p-table type='DIV_TABLE_TYPE' :data='tableData'>
+    <p-table-column type='DIV_TABLE_TYPE' title='Date' key='date'></p-table-column>
+    <p-table-column type='DIV_TABLE_TYPE' title='Name' key='name'></p-table-column>
+    <p-table-column type='DIV_TABLE_TYPE' title='Address' key='address'></p-table-column>
   </p-table>
 </template>
 

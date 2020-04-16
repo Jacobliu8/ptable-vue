@@ -9,7 +9,7 @@ export default {
     const headers = [];
     const headerCols = [];
     for (const column of this.columns) {
-      headers.push(column.renderHeader(column.title));
+      headers.push(column.renderHeader(h, column.title));
       headerCols.push(h('div', {
         display: 'table-column',
         width: '100px',
@@ -44,7 +44,7 @@ export default {
       return this.$parent;
     },
     columns: function () {
-      return this.store.state.columns;
+      return this.store.state.originColumns;
     },
   },
 

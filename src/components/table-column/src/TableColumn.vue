@@ -13,6 +13,7 @@
 
 <script>
   import PTableNativeColumn from '../../table/src/nativeTable/NativeTableColumn';
+  import PTableDivColumn from './DivTableColumn';
   import {
     DIV_TABLE_TYPE,
     NATIVE_TABLE_TYPE,
@@ -26,6 +27,7 @@
     ],
     components: {
       PTableNativeColumn,
+      PTableDivColumn,
     },
     data: function () {
       return {
@@ -38,7 +40,7 @@
     },
     methods: {
       getSpecificComponent: function () {
-        return PTableNativeColumn.name;
+        return this.type === this.NATIVE_TABLE_TYPE ? PTableNativeColumn.name : PTableDivColumn.name;
       },
     },
   };

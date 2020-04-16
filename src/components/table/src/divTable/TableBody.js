@@ -15,7 +15,7 @@ export default {
     for (const item of this.data) {
       const row = [];
       for (const column of this.columns) {
-        row.push(column.renderHeader(item));
+        row.push(column.renderCell(h, item));
       }
       body.push(h('div', {
         style: 'table-row-group',
@@ -33,7 +33,7 @@ export default {
       }, bodyCols),
       h('div', {
         style: {
-          display: 'table-header-group',
+          display: 'table-row-group',
         },
       }, body),
     ]);
