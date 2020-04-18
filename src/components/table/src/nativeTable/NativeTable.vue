@@ -1,6 +1,6 @@
 <template>
   <div class='p-table-native'>
-    <div class='hidden-columns'>
+    <div class='hidden-columns' ref='hiddenColumns'>
       <slot></slot>
     </div>
     <div class='p-table-native-header'>
@@ -20,6 +20,8 @@
     ],
     components: {
       NativeTableHeader,
+    },
+    created () {
     },
   };
 </script>

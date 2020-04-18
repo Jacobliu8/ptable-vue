@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import {createStore} from '../../../store/columnStore';
+  import {createStore} from '../store/columnStore';
   import _ from 'lodash';
   import TableBody from './TableBody';
   import TableHeader from './TableHeader';
