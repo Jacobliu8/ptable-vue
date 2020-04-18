@@ -1,6 +1,12 @@
 import Vuex from 'vuex';
 import _ from 'lodash';
 
+export const SET_DATA = 'setData';
+
+export const INSERT_COLUMN = 'insertColumn';
+
+export const update_Column = 'updateColumn';
+
 export const createStore = () => {
   const store = new Vuex.Store({
     state: {
@@ -9,7 +15,7 @@ export const createStore = () => {
       data: [],
     },
     mutations: {
-      insertColumn (state, column, index) {
+      [INSERT_COLUMN] (state, {column, index}) {
         let array = state.originColumns;
         if (!_.isNil(index)) {
           array.splice(index, 0, column);
@@ -18,10 +24,10 @@ export const createStore = () => {
           array.push(column);
         }
       },
-      setData (state, data) {
+      [SET_DATA] (state, data) {
         state.data = data;
       },
-      updateColumn (state) {
+      [update_Column] (state) {
         state.columns = state.originColumns;
       },
     },

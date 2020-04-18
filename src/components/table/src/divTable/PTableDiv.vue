@@ -1,6 +1,6 @@
 <template>
   <div>
-    <slot></slot>
+    <slot name='columns'></slot>
     <table-body :store='store'></table-body>
     <table-header :store='store'></table-header>
   </div>

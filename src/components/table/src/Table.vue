@@ -1,12 +1,15 @@
 <template>
   <div class='p-table-root'>
     <component v-bind:is='getSpecificComponent()'
+               :tableId='tableId'
                :height='height'
                :rowKey='rowKey'
                :border='border'
                :empty-text='emptyText'
                :show-Header='showHeader'
+               :store='store'
                :data='data'>
+      <slot></slot>
     </component>
   </div>
 </template>
@@ -19,6 +22,11 @@
     NATIVE_TABLE_TYPE,
   } from '../../../constant/table/constant';
   import {TableParamsMixins} from './mixins/tableParamsMixins';
+  import {
+    createStore,
+    SET_DATA,
+  } from './store/columnStore';
+  import {getComponentId} from '../../../utils/IdentifyUtils';
 
   export default {
     name: 'PTable',
@@ -33,6 +41,8 @@
       return {
         NATIVE_TABLE_TYPE: NATIVE_TABLE_TYPE,
         DIV_TABLE_TYPE: DIV_TABLE_TYPE,
+        store: null,
+        tableId: null,
       };
     },
     props: {
@@ -42,6 +52,11 @@
       getSpecificComponent: function () {
         return this.type === this.NATIVE_TABLE_TYPE ? PTableNative.name : PTableDiv.name;
       },
+    },
+    created () {
+      this.tableId = getComponentId(this.getSpecificComponent());
+      this.store = createStore();
+      this.store.commit(SET_DATA, this.data);
     },
   };
 </script>

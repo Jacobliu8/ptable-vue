@@ -1,11 +1,12 @@
 export const TableColumnParamsMixins = {
   props: {
     title: String,
-    key: String,
+    prop: String,
     align: String,
     headerAlign: String,
     width: String,
     ellipsis: Boolean,
+    store: Object,
     // fixed: Boolean,
   },
 };

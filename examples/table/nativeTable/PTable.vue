@@ -1,8 +1,8 @@
 <template>
-  <p-table type='DIV_TABLE_TYPE' :data='tableData'>
-    <p-table-column type='DIV_TABLE_TYPE' title='Date' key='date'></p-table-column>
-    <p-table-column type='DIV_TABLE_TYPE' title='Name' key='name'></p-table-column>
-    <p-table-column type='DIV_TABLE_TYPE' title='Address' key='address'></p-table-column>
+  <p-table type='NATIVE_TABLE' :data='tableData'>
+    <p-table-column type='NATIVE_TABLE' title='Date' prop='date'></p-table-column>
+    <p-table-column type='NATIVE_TABLE' title='Name' prop='name'></p-table-column>
+    <p-table-column type='NATIVE_TABLE' title='Address' prop='address'></p-table-column>
   </p-table>
 </template>
 
@@ -14,12 +14,12 @@
         tableData: [
           {
             date: '2016-05-02',
-            name: '王小虎',
+            name: '夫兰茜',
             address: '上海市普陀区金沙江路 1518 弄',
           },
           {
             date: '2016-05-04',
-            name: '王小虎',
+            name: '刘宏博',
             address: '上海市普陀区金沙江路 1517 弄',
           },
           {

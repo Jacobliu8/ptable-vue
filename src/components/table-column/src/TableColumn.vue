@@ -1,12 +1,13 @@
 <template>
   <div class='p-table-column-root'>
     <component v-bind:is='getSpecificComponent()'
-               :height='height'
-               :rowKey='rowKey'
-               :border='border'
-               :empty-text='emptyText'
-               :show-Header='showHeader'
-               :data='data'>
+               :title='title'
+               :prop='prop'
+               :align='align'
+               :headerAlign='headerAlign'
+               :store='store'
+               :width='width'
+               :ellipsis='ellipsis'>
     </component>
   </div>
 </template>
