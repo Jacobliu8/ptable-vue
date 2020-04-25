@@ -24,6 +24,7 @@
     ],
     props: {
       store: Object,
+      tableId: String,
     },
     components: {
       NativeTableHeader,

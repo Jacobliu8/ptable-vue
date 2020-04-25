@@ -11,7 +11,7 @@ export default {
 
   computed: {
     columns: function () {
-      return this.store.state.originColumns;
+      return this.store.state.columns;
     },
     data: function () {
       return this.store.state.data;

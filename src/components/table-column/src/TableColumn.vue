@@ -7,6 +7,7 @@
              :store='store'
              :width='width'
              :ellipsis='ellipsis'>
+    <slot></slot>
   </component>
 </template>
 
@@ -35,7 +36,10 @@
       };
     },
     props: {
-      type: String,
+      type: {
+        type: String,
+        default: () => (NATIVE_TABLE_TYPE),
+      },
     },
     methods: {
       getSpecificComponent: function () {
