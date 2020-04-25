@@ -2,6 +2,12 @@
 
 var cheerio = require('cheerio');
 
+/**
+ * 在生成组件效果展示时,解析出的VUE组件有些是带<script>和<style>的,我们需要先将其剔除,之后使用
+ * @param  {[String]} str  e.g '<template></template><script></script>''
+ * @param  {[Array|String]}       tags   需要剔除的标签名 e.g'script'或['script','style']
+ * @return {[String]}             e.g '<html><head><template></template></head><body></body></html>'
+ */
 exports.strip = function(str, tags) {
   var $ = cheerio.load(str, {decodeEntities: false});
 
@@ -19,6 +25,12 @@ exports.strip = function(str, tags) {
   return $.html();
 };
 
+/**
+ * 获取标签中的文本内容
+ * @param  {[String]} str e.g '<html><body><h1>header</h1></body><script></script></html>'
+ * @param  {[String]} tag e.g 'h1'
+ * @return {[String]}     e.g 'header'
+ */
 exports.fetch = function(str, tag) {
   var $ = cheerio.load(str, {decodeEntities: false});
   if (!tag) return str;
