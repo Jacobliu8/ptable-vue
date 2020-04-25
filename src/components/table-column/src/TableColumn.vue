@@ -1,20 +1,18 @@
 <template>
-  <div class='p-table-column-root'>
-    <component v-bind:is='getSpecificComponent()'
-               :title='title'
-               :prop='prop'
-               :align='align'
-               :headerAlign='headerAlign'
-               :store='store'
-               :width='width'
-               :ellipsis='ellipsis'>
-    </component>
-  </div>
+  <component v-bind:is='getSpecificComponent()'
+             :title='title'
+             :prop='prop'
+             :align='align'
+             :headerAlign='headerAlign'
+             :store='store'
+             :width='width'
+             :ellipsis='ellipsis'>
+  </component>
 </template>
 
 <script>
   import PTableNativeColumn from '../../table/src/nativeTable/NativeTableColumn';
-  import PTableDivColumn from './DivTableColumn';
+  import PTableDivColumn from '../../table/src/divTable/DivTableColumn';
   import {
     DIV_TABLE_TYPE,
     NATIVE_TABLE_TYPE,

@@ -1,6 +1,10 @@
 import {TableColumnParamsMixins} from '../mixins/tableColumnParamsMixins';
 import {getComponentId} from '../../../../utils/IdentifyUtils';
 import {INSERT_COLUMN} from '../store/columnStore';
+import {
+  PTABLE_CELL_CLASS,
+  PTABLE_HEADER_CLASS,
+} from '../constant';
 
 export default {
   name: 'PTableNativeColumn',
@@ -31,22 +35,30 @@ export default {
       }
       return props;
     },
+    renderHeader (h, value) {
+      return h('th', {
+        class: PTABLE_HEADER_CLASS,
+      }, value);
+    },
+    renderCell (h, value) {
+      return h('td', {
+        class: PTABLE_CELL_CLASS,
+      }, value);
+    },
   },
 
   created () {
     this.columnId = getComponentId(this.name);
     const column = this.getPropsData();
-    column.renderHeader = (h, value) => {
-      return h('th', {
-        class: 'ptable-native-table-theader',
-      }, value);
-    };
-    column.renderCell = (h, value) => {
-      return h('td', {
-        class: 'ptable-native-table-tcell',
-      }, value);
-    };
-    this.owner.store.commit(INSERT_COLUMN, {column});
+    column.renderHeader = this.renderHeader;
+    column.renderCell = this.renderCell;
+    this.columnConfig = column;
+  },
+
+  mounted () {
+    this.owner.store.commit(INSERT_COLUMN, {
+      column: this.columnConfig,
+    });
   },
 
   render (h) {

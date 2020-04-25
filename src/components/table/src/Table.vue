@@ -1,17 +1,15 @@
 <template>
-  <div class='p-table-root'>
-    <component v-bind:is='getSpecificComponent()'
-               :tableId='tableId'
-               :height='height'
-               :rowKey='rowKey'
-               :border='border'
-               :empty-text='emptyText'
-               :show-Header='showHeader'
-               :store='store'
-               :data='data'>
-      <slot></slot>
-    </component>
-  </div>
+  <component v-bind:is='getSpecificComponent()'
+             :tableId='tableId'
+             :height='height'
+             :rowKey='rowKey'
+             :border='border'
+             :empty-text='emptyText'
+             :show-Header='showHeader'
+             :store='store'
+             :data='data'>
+    <slot></slot>
+  </component>
 </template>
 
 <script>

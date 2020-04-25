@@ -31,6 +31,7 @@ export const createStore = () => {
         state.columns = state.originColumns;
       },
     },
+    getters: {},
   });
   return store;
 };

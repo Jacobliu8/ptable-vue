@@ -1,4 +1,4 @@
-import {TableColumnParamsMixins} from '../../table/src/mixins/tableColumnParamsMixins';
+import {TableColumnParamsMixins} from '../mixins/tableColumnParamsMixins';
 
 let columnIdSeed = 1;
 

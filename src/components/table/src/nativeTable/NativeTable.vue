@@ -3,10 +3,10 @@
     <div class='hidden-columns' ref='hiddenColumns'>
       <slot></slot>
     </div>
-    <div class='p-table-native-header-part'>
+    <div class='ptable-header-content'>
       <native-table-header :store='store'></native-table-header>
     </div>
-    <div class='p-table-native-body-part'>
+    <div class='ptable-body-content'>
       <native-table-body :store='store'></native-table-body>
     </div>
   </div>
