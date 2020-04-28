@@ -50,6 +50,7 @@
 数据结构比较复杂的时候，可使用多级表头来展现数据的层次关系。
 
 :::demo 只需要在 p-table-column 里面嵌套 p-table-column，就可以实现多级表头。
+```html
 <template>
   <p-table
     type='NATIVE_TABLE' 
@@ -149,5 +150,6 @@
     }
   }
 </script>
+```
 
 :::
